@@ -10,8 +10,8 @@ class PagesController < ApplicationController
 
   def contact
     @title = "Contact"
-    #Fixme 这里的||=　没有起到效果,可能是没有session的原因
-    @contact ||= Contact.first
+    # cache the contact
+    @contact = session[:contact] ||= Contact.first
   end
 
 end
