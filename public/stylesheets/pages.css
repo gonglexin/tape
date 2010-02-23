@@ -18,16 +18,16 @@ body {
 }
 
 #content {
-	margin-top: 1em;
+/*	margin-top: 1em;*/
 	font-size: 120%;
 	padding: 20px;
 	background: #ffc;
 }
 
 #nav {
-	float: left;
-	width: 20%;
-	padding: 1em;
+/*	float: left;*/
+/*	width: 20%;*/
+/*	padding: 1em;*/
 }
 .navigation {
 	background-color: #006400;
