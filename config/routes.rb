@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
+  # map.resources :users
 
   # map.resources :tapes
 
@@ -40,6 +40,8 @@ ActionController::Routing::Routes.draw do |map|
         admin.resources :tapes
         admin.resources :contacts
         admin.resources :users
+        
+        admin.login '/login', :controller => 'admin', :action => "login"
     end
   
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.

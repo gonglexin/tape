@@ -75,7 +75,7 @@ class Admin::UsersController < ApplicationController
    # DELETE /users/1.xml
    def destroy
      @user = User.find(params[:id])
-     @user.destroy
+     @user.destroy unless @user.name == 'yangyi'
 
      respond_to do |format|
        format.html { redirect_to(admin_users_url) }

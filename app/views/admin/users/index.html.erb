@@ -3,15 +3,11 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Hashed password</th>
-    <th>Salt</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
     <td><%=h user.name %></td>
-    <td><%=h user.hashed_password %></td>
-    <td><%=h user.salt %></td>
     <td><%= link_to 'Show', [:admin,user] %></td>
     <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
     <td><%= link_to 'Destroy', [:admin,user], :confirm => 'Are you sure?', :method => :delete %></td>
