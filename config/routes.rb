@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about '/about', :controller => 'pages', :action => 'about'
   map.contactus '/contactus', :controller => 'pages', :action => 'contact'
   
-  map.admin '/admin', :controller => 'contacts', :action => 'edit'
+  map.admin '/admin', :controller => 'admin/contacts', :action => 'edit'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -33,11 +33,12 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
+    map.namespace :admin do |admin|
+        # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+        admin.resources :tapes
+        admin.resources :contacts
+    end
+  
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "pages"
 

@@ -1,0 +1,24 @@
+<h1>Listing tapes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Image url</th>
+    <th>Memo</th>
+  </tr>
+
+<% @tapes.each do |tape| %>
+  <tr>
+    <td><%=h tape.title %></td>
+    <td><%=h tape.image_url %></td>
+    <td><%=h tape.memo %></td>
+    <td><%= link_to 'Show', [:admin, tape] %></td>
+    <td><%= link_to 'Edit', edit_admin_tape_path(tape) %></td>
+    <td><%= link_to 'Destroy', [:admin, tape], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tape', new_admin_tape_path %>
