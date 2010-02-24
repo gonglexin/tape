@@ -1,4 +1,5 @@
-class Admin::ContactsController < ApplicationController
+class Admin::ContactsController < Admin::ApplicationController
+  before_filter :authorize
   # GET /contacts
   # GET /contacts.xml
   def index

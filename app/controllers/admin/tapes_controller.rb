@@ -1,4 +1,5 @@
-class Admin::TapesController < ApplicationController
+class Admin::TapesController < Admin::ApplicationController
+  before_filter :authorize
   # GET /tapes
   # GET /tapes.xml
   def index
