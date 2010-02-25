@@ -4,8 +4,8 @@
 </p>
 
 <p>
-  <b>Image url:</b>
-  <%=h @tape.image_url %>
+  <b>Photo:</b>
+  <%= image_tag(@tape.photo(:thumb), :mouseover => @tape.photo.url) %>
 </p>
 
 <p>

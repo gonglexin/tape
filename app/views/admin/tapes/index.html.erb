@@ -3,15 +3,14 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Image url</th>
+    <th>Photo</th>
     <th>Memo</th>
   </tr>
 
 <% @tapes.each do |tape| %>
   <tr>
     <td><%=h tape.title %></td>
-    <td><%= image_tag(tape.image_url, :alt => tape.memo, :title => tape.title) %></td>
-    <!-- <td><%=h tape.image_url %></td> -->
+    <td><%= image_tag(tape.photo(:thumb)) %></td>
     <td><%=h tape.memo %></td>
     <td><%= link_to 'Show', [:admin, tape] %></td>
     <td><%= link_to 'Edit', edit_admin_tape_path(tape) %></td>

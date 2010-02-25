@@ -9,7 +9,7 @@
 <% for tape in @tapes %>
 	<tr>
 		<td><%=h tape.title %></td>
-		<td><%= image_tag(tape.image_url, :alt => tape.memo, :title => tape.title) %></td>
+		<td><%= image_tag(tape.photo(:thumb), :alt => tape.memo, :title => tape.title) %></td>
 		<td><%=h tape.memo %></td>
 	</tr>
 	<% end %>
