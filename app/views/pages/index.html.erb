@@ -13,6 +13,11 @@
 		<td><%=h tape.memo %></td>
 	</tr>
 	<% end %>
+	<tr>
+		<td colspan="3">
+			<%= will_paginate @tapes %>
+		</td>
+	</tr>
 </table> 
 <br /> 
 <%= link_to "Contact Us", contactus_path, :class => "button round" %>
