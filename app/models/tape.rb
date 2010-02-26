@@ -10,4 +10,5 @@ class Tape < ActiveRecord::Base
   validates_attachment_size :photo, :less_than => 1.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   #validates_format_of :image_url, :with => /\.(gif|jpg|png)$/i, :message => "must be a URL for GIF, JPG or PNG image."
+  
 end
