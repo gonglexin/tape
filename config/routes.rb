@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  # map.resources :categories
+
   # map.resources :users
 
   # map.resources :tapes
@@ -40,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
         admin.resources :tapes
         admin.resources :contacts
         admin.resources :users
+        admin.resources :categories
         
         admin.login '/login', :controller => 'admin', :action => "login"
     end
