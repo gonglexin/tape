@@ -1,5 +1,10 @@
 <h1>Listing tapes</h1>
 
+<% form_for @search do |f| -%>
+  <%= f.text_field :title_or_memo_like %>
+	<%= f.submit 'Serach' %>
+<% end -%>
+
 <table>
   <tr>
     <th>Title</th>
