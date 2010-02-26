@@ -4,7 +4,7 @@ class Admin::TapesController < Admin::ApplicationController
   # GET /tapes.xml
   def index
     # @tapes = Tape.all
-    @tapes = Tape.paginate :page => params[:page], :per_page => 2
+    @tapes = Tape.paginate :page => params[:page], :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb
