@@ -8,7 +8,7 @@
   </tr>
 
 <% @tapes.each do |tape| %>
-  <tr>
+  <tr>	
     <td><%=h tape.title %></td>
     <td><%= image_tag(tape.photo(:thumb)) %></td>
     <td><%=h tape.memo %></td>
@@ -18,7 +18,9 @@
   </tr>
 <% end %>
 	<tr>
-		<%= will_paginate @tapes %>
+		<td colspan="6">
+			<%= will_paginate @tapes %>
+		</td>
 	</tr>
 </table>
 
