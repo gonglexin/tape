@@ -1,0 +1,12 @@
+<h1>联系我们</h1>
+<p>
+	<% unless @contact.nil? %>
+		<ul>
+			<li>Name: <%=h @contact.name %></li>
+			<li>Email: <%=h @contact.email %></li>
+			<li>Tel: <%=h @contact.tel %></li>
+			<li>Fax: <%=h @contact.fax %></li>
+			<li>Address: <%=h @contact.address %></li>
+		</ul>
+	<% end  %>
+</p>
