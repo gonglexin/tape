@@ -1,3 +1,10 @@
+<div id="left">
+	<% Category::TYPES.each do |category| %>
+		<%= category[0] %>
+		<%= category[1] %>
+	<% end  %>
+</div>
+<div id="right">
 <h1>Listing tapes</h1>
 
 <% form_for @search do |f| -%>
@@ -26,3 +33,4 @@
 </table> 
 <br /> 
 <%= link_to "Contact Us", contactus_path, :class => "button round" %>
+</div>
