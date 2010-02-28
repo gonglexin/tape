@@ -10,6 +10,7 @@
     <th>Title</th>
     <th>Photo</th>
     <th>Memo</th>
+    <th>Category</th>
   </tr>
 
 <% @tapes.each do |tape| %>
@@ -17,6 +18,7 @@
     <td><%=h tape.title %></td>
     <td><%= image_tag(tape.photo(:thumb)) %></td>
     <td><%=h tape.memo %></td>
+    <td><%=h tape.category.name %></td>
     <td><%= link_to 'Show', [:admin, tape] %></td>
     <td><%= link_to 'Edit', edit_admin_tape_path(tape) %></td>
     <td><%= link_to 'Destroy', [:admin, tape], :confirm => 'Are you sure?', :method => :delete %></td>

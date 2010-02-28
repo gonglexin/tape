@@ -7,6 +7,10 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.select :category_id, Category::TYPES %>
+  </p>
 	<p>
      <%= f.label :photo %><br />
      <%= f.file_field :photo %>

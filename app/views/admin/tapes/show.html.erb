@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <b>Category:</b>
+  <%=h @tape.category.name %>
+</p>
+
+<p>
   <b>Photo:</b>
   <%= image_tag(@tape.photo(:thumb), :mouseover => @tape.photo.url) %>
 </p>

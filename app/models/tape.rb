@@ -1,4 +1,5 @@
 class Tape < ActiveRecord::Base
+  belongs_to :category
   has_attached_file :photo,
                     :styles => {
                       :thumb => "180x180>"
