@@ -6,7 +6,7 @@ class Tape < ActiveRecord::Base
                     },
                     :url => "tapes/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/images/tapes/:id/:style/:basename.:extension"
-  validates_presence_of :title#, :image_url
+  validates_presence_of :title, :category
   validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 1.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
