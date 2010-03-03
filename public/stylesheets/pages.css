@@ -4,13 +4,13 @@
 }
 
 body {
-	background: #cff;
+	background: #2E3D52;
 }
 
 #header {
 	padding-top: 20px;
 	text-align: center;
-	background: #ffc;
+	background: #405B7C;
 }
 
 #header img {
@@ -20,9 +20,9 @@ body {
 
 #content {
 /*	margin-top: 1em;*/
-	font-size: 120%;
-	padding: 20px;
-	background: #ffc;
+/*	font-size: 120%;*/
+	padding: 5px;
+	background: #5A708C;
 }
 
 #nav {
@@ -31,7 +31,7 @@ body {
 /*	padding: 1em;*/
 }
 .navigation {
-	background-color: #006400;
+	background-color: #182440;
 	padding: 0 0.7em;
 	white-space: nowrap;
 }
@@ -67,7 +67,7 @@ a.button {
 	text-align: center;
 	width: 190px;
 	color: #fff;
-	background: #006400;
+	background: #142235;
 	font-size: 150%;
 	font-weight: bold;
 	padding: 20px;
@@ -101,4 +101,16 @@ a:visited {
 .round {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+
+#left {
+	float: left;
+	background: #354253;
+/*	font-color: #B1D0EF;*/
+	padding: 1em;
+}
+
+#right {
+	float: left;
+	padding-left: 1em;
 }

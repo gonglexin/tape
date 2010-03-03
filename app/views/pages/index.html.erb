@@ -1,28 +1,34 @@
-<h1>Listing tapes</h1>
-
-<% form_for @search do |f| -%>
-  <%= f.text_field :title_or_memo_like %>
-	<%= f.submit 'Serach' %>
-<% end -%>
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Image url</th>
-		<th>Memo</th>
-	</tr>
-	
-<% for tape in @tapes %>
-	<tr>
-		<td><%=h tape.title %></td>
-		<td><%= image_tag(tape.photo(:thumb), :alt => tape.memo, :title => tape.title) %></td>
-		<td><%=h tape.memo %></td>
-	</tr>
+<div id="left" class="round">
+	<% form_for @search do |f| -%>
+	  <%= f.text_field :title_or_memo_like, :size => 20 %>
+		<%= f.submit 'Search' %>
+	<% end -%>
+	<br />
+	<%= link_to 'All Products', home_path %><br />
+	<% Category::TYPES.each do |category| %>
+		<%= link_to category[0], :controller => "pages", :action => "index", :category => category[1] %><br />
 	<% end %>
-	<tr>
-		<td colspan="3">
-			<%= will_paginate @tapes %>
-		</td>
-	</tr>
-</table> 
-<br /> 
-<%= link_to "Contact Us", contactus_path, :class => "button round" %>
+</div>
+<div id="right">
+	<table>
+	<% for tape in @tapes %>
+		<tr>
+			<!-- <td><%=h tape.title %></td> -->
+			<td>
+				<a rel="facebox" href="<%= image_path(tape.photo.url) %>">
+					<%= image_tag(tape.photo(:thumb), :alt => tape.memo, :title => tape.title) %>
+				</a>
+			</td>
+			<!-- <td><%=h tape.memo %></td> -->
+		</tr>
+		<% end %>
+		<tr>
+			<td>
+				<%= will_paginate @tapes %>
+			</td>
+		</tr>
+	</table> 
+	<br /> 
+	<%= link_to "Contact Us", contactus_path, :class => "button round" %>
+</div>
+<br clear="all">

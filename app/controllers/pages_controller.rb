@@ -1,8 +1,12 @@
 class PagesController < ApplicationController
   def index
     @title = "Home"
-    @search = Tape.search(params[:search])
-    @tapes = @search.paginate :page => params[:page], :per_page => 10
+    if params[:category]
+      @search = Tape.category_id_is(params[:category]).search(params[:search])
+    else
+      @search = Tape.search(params[:search])
+    end
+    @tapes = @search.paginate :page => params[:page], :per_page => 2
   end
 
   def about

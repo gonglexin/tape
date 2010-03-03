@@ -1,8 +1,9 @@
 <h1>Listing tapes</h1>
 
 <% form_for @search do |f| -%>
+	<%= f.select :category_id, Category::TYPES, :include_blank => true  %>
   <%= f.text_field :title_or_memo_like %>
-	<%= f.submit 'Serach' %>
+	<%= f.submit 'Search' %>
 <% end -%>
 
 <table>
