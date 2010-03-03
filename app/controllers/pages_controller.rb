@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     else
       @search = Tape.search(params[:search])
     end
-    @tapes = @search.paginate :page => params[:page], :per_page => 2
+    @tapes = @search.paginate :page => params[:page], :per_page => 8
   end
 
   def about

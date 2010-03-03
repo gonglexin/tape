@@ -10,24 +10,18 @@
 	<% end %>
 </div>
 <div id="right">
-	<table>
-	<% for tape in @tapes %>
-		<tr>
+	<ul>
+		<% for tape in @tapes %>
 			<!-- <td><%=h tape.title %></td> -->
-			<td>
+			<li>
 				<a rel="facebox" href="<%= image_path(tape.photo.url) %>">
 					<%= image_tag(tape.photo(:thumb), :alt => tape.memo, :title => tape.title) %>
 				</a>
-			</td>
+			</li>
 			<!-- <td><%=h tape.memo %></td> -->
-		</tr>
 		<% end %>
-		<tr>
-			<td>
-				<%= will_paginate @tapes %>
-			</td>
-		</tr>
-	</table> 
+		</ul>
+		<%= will_paginate @tapes %>
 	<br /> 
 	<%= link_to "Contact Us", contactus_path, :class => "button round" %>
 </div>

@@ -112,5 +112,13 @@ a:visited {
 
 #right {
 	float: left;
-	padding-left: 1em;
+/*	padding-left: 0px;*/
+	width: 600px;
+}
+
+#right li {
+	list-style-type: none;
+	display: inline-block;
+	white-space:nowrap;
+	padding: 1em 0.2em;
 }
